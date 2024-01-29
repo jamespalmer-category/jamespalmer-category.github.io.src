@@ -1,8 +1,10 @@
 # Attention is all you need (2017)
 
+[The original paper](https://arxiv.org/pdf/1706.03762.pdf)
+
 The reason I came to this paper first is because it's the one that introduced the transformer, the key to understanding how LLM architecture works. The number one picture you'll always see for the architecture is the one below:
 
-![Transformer Architecture](..\..\..\images\transformer_architecture.png)
+![Transformer Architecture](..\..\..\images\data_science\llm_diary\articles\attention_is_all_you_need\transformer_architecture.png)
 
 This comes straight from the paper itself and is very clear, hence why it is the go-to image for describing transformer architecture. However, there are a key questions to ask from this picture: **What is "Multi-head attention?"**
 
@@ -29,7 +31,7 @@ We also have "encoder-decoder attention" which corresponds to the arrow coming o
 
 ## Word on Group Normalization
 
-Here, the normalisation used is called "Group Normalization", which was first written about by meta researchers in 2020. The idea behind it is when normalising over a batch to get a mean and standard deviation over it, they wanted to find a way that wasn't dependent on batch dimension - as this lead to batch normalization increasing in error. Instead, you take your samples and split them into different "groups" of channels and average over them - this mitigates the issue but I'm not 100% clear how.
+In the case of training LLMs, the normalisation used is called "Group Normalization", which was first written about by meta researchers in 2020. The idea behind it is when normalising over a batch to get a mean and standard deviation over it, they wanted to find a way that wasn't dependent on batch dimension - as this lead to batch normalization increasing in error. Instead, you take your samples and split them into different "groups" of channels and average over them - this mitigates the issue but I'm not 100% clear how.
 
 ## Questions that I need to follow up on
 
